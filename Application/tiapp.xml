@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ti:app xmlns:ti="http://ti.appcelerator.org">
+    <id>com.pjgames.bang</id>
+    <name>Bang!Western Duels</name>
+    <version>1.0</version>
+    <publisher>johneisenheim</publisher>
+    <url>http://</url>
+    <description>undefined</description>
+    <copyright>PJGames</copyright>
+    <icon>appicon.png</icon>
+    <fullscreen>false</fullscreen>
+    <navbar-hidden>false</navbar-hidden>
+    <analytics>true</analytics>
+    <guid>2d138cd3-7158-4d36-9555-be51f00db4ee</guid>
+    <property name="ti.ui.defaultunit" type="string">dp</property>
+    <ios>
+        <plist>
+            <dict>
+                <key>UISupportedInterfaceOrientations~iphone</key>
+                <array>
+                    <string>UIInterfaceOrientationPortrait</string>
+                </array>
+                <key>UISupportedInterfaceOrientations~ipad</key>
+                <array>
+                    <string>UIInterfaceOrientationPortrait</string>
+                    <string>UIInterfaceOrientationPortraitUpsideDown</string>
+                    <string>UIInterfaceOrientationLandscapeLeft</string>
+                    <string>UIInterfaceOrientationLandscapeRight</string>
+                </array>
+                <key>UIRequiresPersistentWiFi</key>
+                <false/>
+                <key>UIPrerenderedIcon</key>
+                <false/>
+                <key>UIStatusBarHidden</key>
+                <false/>
+                <key>UIStatusBarStyle</key>
+                <string>UIStatusBarStyleDefault</string>
+                <key>CFBundleURLTypes</key>
+                <array>
+                    <dict>
+                        <key>CFBundleURLName</key>
+                        <string>om.pjgames.bang</string>
+                        <key>CFBundleURLSchemes</key>
+                        <array>
+                            <string>Bang!Western Duels</string>
+                            <string>fb671108566326429</string>
+                        </array>
+                    </dict>
+                </array>
+                <key>FacebookAppID</key>
+                <string>671108566326429</string>
+                <key>FacebookDisplayName</key>
+                <string>Bang!Western Duels</string>
+                <key>NSLocationAlwaysUsageDescription</key>
+                <string>
+                    Bang! vorrebbe accedere alla tua posizione.
+                </string>
+            </dict>
+        </plist>
+    </ios>
+    <android xmlns:android="http://schemas.android.com/apk/res/android"/>
+    <mobileweb>
+        <precache/>
+        <splash>
+            <enabled>true</enabled>
+            <inline-css-images>true</inline-css-images>
+        </splash>
+        <theme>default</theme>
+    </mobileweb>
+    <modules>
+        <module platform="iphone">com.facebook</module>
+        <module platform="iphone">bencoding.localnotify</module>
+        <module platform="iphone">bencoding.blur</module>
+        <module platform="iphone" version="1.0.0">com.pj</module>
+        <module platform="android">ti.map</module>
+        <module platform="iphone">ti.map</module>
+        <module platform="iphone">ti.coremotion</module>
+    </modules>
+    <deployment-targets>
+        <target device="android">false</target>
+        <target device="blackberry">false</target>
+        <target device="ipad">false</target>
+        <target device="iphone">true</target>
+        <target device="mobileweb">false</target>
+    </deployment-targets>
+    <sdk-version>3.5.1.GA</sdk-version>
+    <property name="appc-app-id" type="string">5562e33ae334890b36dcba32</property>
+</ti:app>
