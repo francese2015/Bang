@@ -164,6 +164,13 @@
 		//:: Si prendono le statistiche dei giocatori, e la classifica, e si effettuano i calcoli.     :://
 		//::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::://
 		
+		//:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::://
+		//:: Quindi, si modifica la tupla del challenge con l'ID del vincitore nel campo id_winner.         :://
+		//:: Avendo entrambe fatto fault, hanno perso e quindi l'id_winner sarà 0                           :://
+		//:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::://
+		$challenge = '{"id":"'.$id_duels.'","id_winner":"0"}';
+		$valueExecutionQuery = executionQuery(updateQueryIntoDatabase("challenge",$challenge),$connection);
+		
 		//::::::::::::::::::::::::::://
 		//:: Stats giocatore due.  :://
 		//::::::::::::::::::::::::::://

@@ -22,7 +22,7 @@
 	
 	$tmp = '{"player_one":"'.$idPlayer.'","player_two":"'.$idPlayer.'"}';
 	
-	$valueExecutionQuery = executionSelectQuery(selectGetChallengeWithIdPlayer("duels_queue",$tmp,"challenge_date DESC"),$connection);
+	$valueExecutionQuery = executionSelectQuery(selectGetChallengeWithIdPlayer("duels_queue",$tmp,"challenge_date ASC"),$connection);
 	
 	closeConnectionBangServer($connection);
 	

@@ -390,7 +390,7 @@
 		
 		$order_by = "";
 		if($orderSelection != NULL)
-			$order_by = " ORDER BY ".$orderSelection;
+			$order_by = " ORDER BY ".$orderSelection." LIMIT 20";
 		
 		$returnString = "SELECT * FROM ".$table;
 		if($sizeArray > 0){
