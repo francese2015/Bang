@@ -193,10 +193,17 @@
 	
 	if(($num_faults_one != 0) and ($num_faults_two != 0)){
 		//::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::://
-		//:: Se il secondo e il primo giocatore hanno sbagliato il bersaglio, entrambe hanno perso.    :://	
+		//:: Se il secondo e il primo giocatore hanno sbagliato il bersaglio, entrambe hanno perso.    :://
+		//:: Quindi nell'id_winner si mette 0														   :://
 		//::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::://
 		//:: Si prendono le statistiche dei giocatori, e la classifica, e si effettuano i calcoli.     :://
 		//::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::://
+		
+		//:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::://
+		//:: Quindi, si modifica la tupla del challenge con l'ID del vincitore nel campo id_winner.         :://
+		//:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::://
+		$challenge = '{"id":"'.$id_duels.'","id_winner":"0"}';
+		$valueExecutionQuery = executionQuery(updateQueryIntoDatabase("challenge",$challenge),$connection);
 		
 		//::::::::::::::::::::::::::://
 		//:: Stats giocatore due.  :://
